@@ -1,0 +1,513 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Python 虚拟环境和依赖管理工具大乱斗 - PyCon China 2019 上海</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+		<style>
+			body {
+				font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+			}
+			.reveal h1 {
+				font-size: 600%;
+			}
+			
+			.reveal.reveal img {
+				border: none;
+				box-shadow: none;
+				max-height: calc(66vh);
+				max-width: calc(66vw);
+			}
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<!-- <h2>Python 虚拟环境和依赖管理工具大乱斗</h2> -->
+						<img src="./images/title.jpg"><br><br>
+						<small>李辉（Grey Li）⚔️ PyCon China 2019 上海</small>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+						## 李辉 / Grey Li
+						<div class="row">
+						<div class="col-md-7">
+							<ul class="mt-5">
+								<li>独立 Web 开发者</li>
+								<li>Flask 维护者之一</li>
+								<li>《Flask Web 开发实战》</li>
+								<li><a href="http://helloflask.com">HelloFlask</a> 管理员</li>
+								<li>微软 Python 方向 MVP</li>
+								<li>个人网站 <a href="http://greyli.com">greyli.com</a></li>
+							</ul>
+						</div>
+						<div class="col-md-5">
+						<img src="./images/four.jpg" height="350px">
+						</div>
+						</textarea>
+					</section>
+				</section>
+				<section>  <!-- 解释两个问题 -->
+					<section data-markdown>
+						<textarea data-template>
+							## 三个问题
+							- 为什么要使用虚拟环境？
+							- 什么是虚拟环境？
+							- 为什么要管理依赖？
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						<img src="./images/lizi.png">
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						### 小明
+						<img src="./images/ming.jpg">
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						<h3 class="text-danger">小红</h3>
+						<img src="./images/hong.jpg">
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+						<h3 class="text-white" style="text-shadow: 10px 10px 5px black;">小白</h3>
+						<img src="./images/bai.jpg">
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### 鱼和熊掌不可兼得
+							<img src="./images/yhxz.jpg">
+
+							❌ 
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### 小红和小白不能都要
+							<img src="./images/wqdy.jpg">
+
+							❌ 
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							<img src="./images/ming-hong.jpg">
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### requirements.txt
+							<span style="background: #272822; padding: 10px; color:dimgray"> 1  </span>
+							<span style="background: #272822; padding: 10px 40px; color: white">女朋友==<span style="color: #a6e22e">v.小红</span></span><br>
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### 从此，他们幸福快乐的度过了一生
+							<p class="fragment unique">（公映版）</p>
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### ~~从此，他们幸福快乐的度过了一生~~
+							（导演剪辑版）
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							<img src="./images/ming-bai.jpg">
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### requirements.txt
+							<span style="background: #272822; padding: 10px; color:dimgray"> 1  </span>
+							<span style="background: #272822; padding: 10px 40px; color: white">女朋友==<span style="color: #a6e22e">v.小白</span></span><br>
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							##  🤔 ？
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							# 依赖
+							# 冲突
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							<img src="./images/sha.jpg">							
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### requirements.txt<br>
+							<div style="margin-bottom: 20px">
+							<span style="background: #fdaeb7; padding: 10px"> -  </span><span style="background: #ffdce0; padding: 10px 40px; ">女朋友==v.小红</span>
+							</div>
+							<span style="background: #bef5cb; padding: 10px"> +</span><span style="background: #cdffd8; padding: 10px 40px">女朋友==v.小白</span>
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### 当然，也有例外
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							<img src="./images/two-girlfriends.png">							
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### 别做梦了，
+							### 先找到第一个女朋友再说吧
+						</textarea>
+					</section>
+					<section class="text-left">
+							<h3 class="text-center">使用虚拟环境可以避免依赖冲突</h3>
+						<p class="fragment unique" style="background: #272822; padding: 10px 40px; color: white">
+							<span style="color:#a6e22e">$</span> workon world1<br>
+						</p>
+						<p class="fragment unique" style="background: #272822; padding: 10px 40px; color: white">
+								(world1) <span style="color:#a6e22e">$</span> pip show 女朋友<br>
+								<span style="color:#a6e22e">Name:</span> 女朋友<br>
+								<span style="color:#a6e22e">Version:</span> v.小红
+							</p>
+						<p class="fragment unique" style="background: #272822; padding: 10px 40px; color: white">
+						<span style="color:#a6e22e">$</span> workon world2
+						</p>
+						<p class="fragment unique" style="background: #272822; padding: 10px 40px; color: white">
+						(world2) <span style="color:#a6e22e">$</span> pip show 女朋友<br>
+						<span style="color:#a6e22e">Name:</span> 女朋友<br>
+						<span style="color:#a6e22e">Version:</span> v.小白
+						</p>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							###	✅ Question 1 solved
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### 虚拟环境 = 独立的 Python 解释器环境
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### 记录依赖以便在其他机器上重现程序运行环境
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							###	✅ All question solved
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## 可以使用哪些工具来管理虚拟环境和依赖？
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### PHP: Composer、PEAR
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Rust: Cargo
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Go: modules
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### Ruby: Rubygem、Bundler
+						</textarea>
+					</section>								
+					<section data-markdown>
+						<textarea data-template>
+							## Python?
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							- easy_install
+							- pip
+							- pipx
+							- virtualenv
+							- pyvenv
+							- venv
+							- pipenv
+							- poetry
+							- hatch
+							- ...
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### 🎉 ~~多么繁荣的 Python 社区！~~ 
+						</textarea>
+					</section>		
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+						## Python 虚拟环境和依赖管理工具选择器®️
+						</textarea>
+					</section>
+					<section data-background="black">
+						<div >
+							<span style="font-size: 40px; background: red; padding:5px 20px;">FBI WARNING</span><br><br>
+							<p>
+								使用本选择器做出的选择，造成的任何后果本人不承担任何责任。
+								包括使用任何不合适的工具造成的心情低落、愤怒、抓狂、发疯和自杀；造成电脑源码丢失、文件错乱、命令行崩溃、
+								电脑死机、冒烟和爆炸，以及造成公司财产损失及破产等一系列后果，
+								均和本选择器（Python 虚拟环境和依赖工具选择器®️）及本人（李辉）没有任何关系。
+							</p>
+						</div>	
+					</section>
+					<section id="beginner" data-markdown>
+						<textarea data-template>
+							##  🔹 Python 初学者？
+							<br>
+							<a class="btn btn-success text-white" href="#lazy">YES</a>
+							<a class="btn btn-danger text-white" href="#star">NO</a>
+						</textarea>
+					</section>
+					<section id="lazy" data-markdown>
+						<textarea data-template>
+							##  🔹 懒不懒？
+							<br>
+							<a class="btn btn-success text-white" href="#lazy-yes">YES</a>
+							<a class="btn btn-danger text-white" href="#lazy-no">NO</a>
+							<a class="btn btn-dark text-white" href="#beginner">BACK</a>
+						</textarea>
+					</section>
+					<section id="lazy-yes" data-markdown>
+						<textarea data-template>
+							
+							### Miniconda+pip
+
+							- 不过，Conda 和 pip 会有一些潜在的冲突
+							- 科学计算？直接用 Miniconda/Anaconda
+							- 懒到不想用虚拟环境？pipreqs + pip
+
+							<br>
+
+							<a class="btn btn-dark text-white" href="#lazy">BACK</a>
+							<a class="btn btn-dark text-white" href="#bing">END</a>
+						</textarea>
+					</section>
+					<section id="lazy-no" data-markdown>
+						<textarea data-template>
+							### virtualenv/venv+pip
+							- 最稳定的组合
+							- 必须掌握的基础工具
+							- 优先使用 venv（Python 3）
+							- 还可以搭配其他工具
+
+							<br>
+
+							<a class="btn btn-dark text-white" href="#lazy">BACK</a>
+							<a class="btn btn-dark text-white" href="#bing">END</a>
+						</textarea>
+					</section>
+					<section id="star" data-markdown>
+						<textarea data-template>
+							 ##  🔹 喜欢星星和蛋糕吗？
+
+							 「✨ 🍰 ✨」
+							<br>
+							<br>
+							<a class="btn btn-success text-white" href="#star-yes">YES</a>
+							<a class="btn btn-danger text-white" href="#star-no">NO</a>
+							<a class="btn btn-dark text-white" href="#beginner">BACK</a>
+						</textarea>
+					</section>
+					<section id="star-yes" data-markdown>
+						<textarea data-template>
+
+							### Pipenv
+							- 方便
+							- 但有很多副作用
+							- 「随时更新锁定依赖」
+							- 上一个版本是 2018.11.26
+							
+							<br>
+
+							<a class="btn btn-dark text-white" href="#star">BACK</a>
+							<a class="btn btn-dark text-white" href="#bing">END</a>
+						</textarea>
+					</section>
+					<section id="star-no" data-markdown>
+						<textarea data-template>
+						### Poetry
+						- Pipenv 替代品
+						- 更稳定
+						- 功能设计合理
+						- 需要一点学习和迁移成本
+
+						<br>
+
+						<a class="btn btn-dark text-white" href="#star">BACK</a>
+						<a class="btn btn-dark text-white" href="#bing">END</a>
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section id="bing" data-markdown>
+						<textarea data-template>
+							##  🔹 你喜欢吃鸡蛋灌饼吗？
+							<br>
+							<a class="btn btn-success text-white" href="#menu">YES</a>
+							<a class="btn btn-danger text-white" href="#menu">NO</a>
+							<a class="btn btn-dark text-white" href="#beginner">BACK</a>
+						</textarea>
+					</section>
+					<section id="menu">
+						<img src="./images/menu.jpg">
+					</section>
+					<section>
+						<img src="./images/headline.png" width="600px">
+						<img src="./images/apple.png">
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							###  🎉 这种伟大的设计理念，
+							### 在 Python 世界也有
+						</textarea>
+					</section>
+					<section data-markdown data-background="red">
+						<textarea data-template>
+							<div class="text-left" style="color: white; padding: 20px;">
+							<p class="text-center" style="color:yellow;">Python 虚拟环境和依赖管理</p>
+							<p style="font-size:30px; font-weight: bold; width: 100%">
+							virtualenv/venv+pip<br>
+							venv+pip+direnv/autoenv<br>
+							virtualenv/venv+pip+virtualenv-burrito<br>
+							virtualenv/venv+pip+virtualenvwrapper  <br>
+							virtualenv/venv+pip+virtualenvwrapper+pip-tools  <br>
+							virtualenv/venv+pip+virtualenvwrapper+pip-tools+pipdeptree<br>
+							vir~/venv+pip+virtualenvwrapper+pip-tools+pipdeptree+direnv
+							<!-- venv+pip<br>
+							venv+pip+direnv/autoenv<br>
+							venv+pip+virtualenv-burrito<br>
+							venv+pip+virtualenvwrapper<br>
+							venv+pip+direnv/autoenv+pip-tools<br>
+							venv+pip+virtualenvwrapper+pip-tools<br>
+							venv+pip+direnv/autoenv+pip-tools+pipdeptree<br>
+							venv+pip+virtualenvwrapper+pip-tools+pipdeptree<br>
+							venv+pip+virtualenvwrapper+pip-tools+pipdeptree+direnv/autoenv<br> -->
+							</p>
+							</div>	
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							### ❤️  作为一个 Python 程序员，
+							### 我们应该感到幸福。
+						</textarea>
+					</section>
+				</section>			
+				<section data-markdown>
+					<textarea data-template>
+						## 谢谢
+
+						<img src="./images/wechat.png" width="250px"><br>
+						<small>Website: <a target="_blank" href="http://greyli.com">greyli.com</a></small><br>
+						<small>Slides: <a target="_blank" href="http://github.com/greyli/pyconchina2019-venv">http://github.com/greyli/pyconchina2019-venv</a></small><br>
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## 参考文章
+						- [不要用 Pipenv](http://greyli.com/do-not-use-pipenv/)
+						- [相比 Pipenv，Poetry 是一个更好的选择](http://greyli.com/poetry-a-better-choice-than-pipenv/)
+						- [只用来管理 Python 版本和虚拟环境，Miniconda 也是一个很好的选择](http://greyli.com/miniconda-is-another-good-choice/)
+						- [要不我们还是用回 virtualenv/venv+pip 吧](http://greyli.com/back-to-virtualenv-venv-and-pip/)
+						- [除了 virtualenv/venv+pip，再试试这些辅助工具](https://zhuanlan.zhihu.com/flask)
+						- [PEP 582 可以给 Python 虚拟环境和依赖管理生态带来什么变化？](https://zhuanlan.zhihu.com/flask)
+
+						<small class="fragment unique">备注：后两篇还没来得及写</small>
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## 🐍 PyCon China 2019
+						9.21 上海 🌧 ⛈ 🌩 
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## ❤️ Many thanks!
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## 🎉 PyCon China 2020 见！
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						#### PyCon China 2019
+						## 散会！
+					</textarea>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="js/reveal.min.js"></script> 
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				hash: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>

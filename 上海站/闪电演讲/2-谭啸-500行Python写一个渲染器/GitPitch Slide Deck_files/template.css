@@ -1,0 +1,471 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/roboto-normal.woff2') format('woff2'),
+       url('/assets/fonts/roboto-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/roboto-medium.woff2') format('woff2'),
+       url('/assets/fonts/roboto-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Heavy';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/roboto-heavy.woff2') format('woff2'),
+       url('/assets/fonts/roboto-heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/open-sans-normal.woff2') format('woff2'),
+       url('/assets/fonts/open-sans-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/open-sans-medium.woff2') format('woff2'),
+       url('/assets/fonts/open-sans-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans Heavy';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/open-sans-heavy.woff2') format('woff2'),
+       url('/assets/fonts/open-sans-heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/lato-normal.woff2') format('woff2'),
+       url('/assets/fonts/lato-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/lato-medium.woff2') format('woff2'),
+       url('/assets/fonts/lato-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato Heavy';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/lato-heavy.woff2') format('woff2'),
+       url('/assets/fonts/lato-heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/montserrat-normal.woff2') format('woff2'),
+       url('/assets/fonts/montserrat-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/montserrat-medium.woff2') format('woff2'),
+       url('/assets/fonts/montserrat-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat Heavy';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/montserrat-heavy.woff2') format('woff2'),
+       url('/assets/fonts/montserrat-heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/oswald-normal.woff2') format('woff2'),
+       url('/assets/fonts/oswald-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Oswald Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/oswald-medium.woff2') format('woff2'),
+       url('/assets/fonts/oswald-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Oswald Heavy';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/oswald-heavy.woff2') format('woff2'),
+       url('/assets/fonts/oswald-heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/source-sans-pro-normal.woff2') format('woff2'),
+       url('/assets/fonts/source-sans-pro-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/source-sans-pro-medium.woff2') format('woff2'),
+       url('/assets/fonts/source-sans-pro-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro Heavy';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/source-sans-pro-heavy.woff2') format('woff2'),
+       url('/assets/fonts/source-sans-pro-heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/raleway-normal.woff2') format('woff2'),
+       url('/assets/fonts/raleway-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Raleway Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/raleway-medium.woff2') format('woff2'),
+       url('/assets/fonts/raleway-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Raleway Heavy';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/raleway-heavy.woff2') format('woff2'),
+       url('/assets/fonts/raleway-heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/poppins-normal.woff2') format('woff2'),
+       url('/assets/fonts/poppins-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Poppins Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/poppins-medium.woff2') format('woff2'),
+       url('/assets/fonts/poppins-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Poppins Heavy';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/poppins-heavy.woff2') format('woff2'),
+       url('/assets/fonts/poppins-heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/ubuntu-normal.woff2') format('woff2'),
+       url('/assets/fonts/ubuntu-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Ubuntu Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/ubuntu-medium.woff2') format('woff2'),
+       url('/assets/fonts/ubuntu-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Ubuntu Heavy';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/ubuntu-heavy.woff2') format('woff2'),
+       url('/assets/fonts/ubuntu-heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/nunito-sans-normal.woff2') format('woff2'),
+       url('/assets/fonts/nunito-sans-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Nunito Sans Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/nunito-sans-medium.woff2') format('woff2'),
+       url('/assets/fonts/nunito-sans-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Nunito Sans Heavy';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/nunito-sans-heavy.woff2') format('woff2'),
+       url('/assets/fonts/nunito-sans-heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/work-sans-normal.woff2') format('woff2'),
+       url('/assets/fonts/work-sans-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Work Sans Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/work-sans-medium.woff2') format('woff2'),
+       url('/assets/fonts/work-sans-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Work Sans Heavy';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/work-sans-heavy.woff2') format('woff2'),
+       url('/assets/fonts/work-sans-heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/prompt-normal.woff2') format('woff2'),
+       url('/assets/fonts/prompt-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Prompt Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/prompt-medium.woff2') format('woff2'),
+       url('/assets/fonts/prompt-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Prompt Heavy';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/prompt-heavy.woff2') format('woff2'),
+       url('/assets/fonts/prompt-heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/quicksand-normal.woff2') format('woff2'),
+       url('/assets/fonts/quicksand-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Quicksand Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/assets/fonts/quicksand-medium.woff2') format('woff2'),
+       url('/assets/fonts/quicksand-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Quicksand Heavy';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/quicksand-heavy.woff2') format('woff2'),
+       url('/assets/fonts/quicksand-heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/righteous-normal.woff2') format('woff2'),
+       url('/assets/fonts/righteous-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Righteous Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/righteous-normal.woff2') format('woff2'),
+       url('/assets/fonts/righteous-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Righteous Heavy';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/righteous-normal.woff2') format('woff2'),
+       url('/assets/fonts/righteous-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Bubblegum';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/bubblegum-normal.woff2') format('woff2'),
+       url('/assets/fonts/bubblegum-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Bubblegum Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/bubblegum-normal.woff2') format('woff2'),
+       url('/assets/fonts/bubblegum-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Bubblegum Heavy';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/bubblegum-normal.woff2') format('woff2'),
+       url('/assets/fonts/bubblegum-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Concert One';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/concert-one-normal.woff2') format('woff2'),
+       url('/assets/fonts/concert-one-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Concert One Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/concert-one-normal.woff2') format('woff2'),
+       url('/assets/fonts/concert-one-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Concert One Heavy';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/concert-one-normal.woff2') format('woff2'),
+       url('/assets/fonts/concert-one-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/source-code-pro-normal.woff2') format('woff2'),
+       url('/assets/fonts/source-code-pro-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Code Pro Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/source-code-pro-medium.woff2') format('woff2'),
+       url('/assets/fonts/source-code-pro-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Source Code Pro Heavy';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/source-code-pro-heavy.woff2') format('woff2'),
+       url('/assets/fonts/source-code-pro-heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/fira-code-normal.woff2') format('woff2'),
+       url('/assets/fonts/fira-code-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Fira Code Medium';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/fira-code-medium.woff2') format('woff2'),
+       url('/assets/fonts/fira-code-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Fira Code Heavy';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/fira-code-heavy.woff2') format('woff2'),
+       url('/assets/fonts/fira-code-heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Victor Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/victor-mono-normal.woff2') format('woff2'),
+       url('/assets/fonts/victor-mono-normal.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Victor Mono Medium';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/victor-mono-medium.woff2') format('woff2'),
+       url('/assets/fonts/victor-mono-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Victor Mono Heavy';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/victor-mono-heavy.woff2') format('woff2'),
+       url('/assets/fonts/victor-mono-heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Victor Mono Italic Medium';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/victor-mono-italic-medium.woff2') format('woff2'),
+       url('/assets/fonts/victor-mono-italic-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inconsolata Medium';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/inconsolata-medium.woff2') format('woff2'),
+       url('/assets/fonts/inconsolata-medium.woff') format('woff');
+}

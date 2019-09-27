@@ -1,0 +1,316 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Python 调试新思路 - @演说.io</title>
+
+    <meta name="keywords" content="演说，yanshuo, yanshuo.io, 演说.io, 空中演说, 展示文稿, HTML 展示文稿, Web 展示文稿" />
+  	  <meta name="description" content="创作真正跨平台的 HTML5 展示文稿，让你的分享到达世界的任何一个角落" />
+
+  		<meta name="apple-mobile-web-app-capable" content="yes">
+  		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  		<!-- Reveal base style -->
+  		<link rel="stylesheet" href="https://yanshuo.io/assets/player/css/reveal.min.css">
+
+  		<!-- Yanshuo.io seed style -->
+  		<link rel="stylesheet" href="https://yanshuo.io/assets/player/atcss/at-block.min.css">
+  		<link rel="stylesheet" href="https://yanshuo.io/assets/player/atcss/at-hljs-theme-bundler.min.css">
+  		<link rel="stylesheet" href="https://yanshuo.io/assets/player/atcss/at-reveal-default-theme.min.css">
+
+  		<!-- Source Sans Web Fonts -->
+  		<link rel="stylesheet" href="https://yanshuo.io/assets/player/lib/font/source-sans-pro/source-sans-pro.css">
+
+      <!-- Printing and PDF exports -->
+      <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://yanshuo.io/assets/player//css/print/pdf.css' : '';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      </script>
+
+      <!--[if lt IE 9]>
+  		<script src="lib/js/html5shiv.js"></script>
+  		<![endif]-->
+
+  		<!-- style for "critical path" -->
+  		<style>
+  	  </style>
+  </head>
+  <body>
+    <!-- TODO: a lightweighted loading -->
+
+    <!-- main slides -->
+    <div id="YS" class="at-code-lh-18" style="width:100%;height:100%;" data-reveal-theme="qcon" data-highlight-theme="tomorrow" data-ys-title="Python 调试新思路" data-ys-user="laike9m" data-ys-transition="none" data-ys-backgroundTransition="default" data-ys-transitionSpeed="default" data-ys-fv="2"><style>
+
+  /*********************************************
+   * THEME: qcon
+   *********************************************/
+
+  /*********************************************
+   * Yanshuo Inject
+   *********************************************/
+
+   .hljs{
+     
+   }
+
+  /*********************************************
+   * GLOBAL STYLES
+   *********************************************/
+
+  body, .reveal, .reveal-preview {
+  	background-color: #fff;
+  }
+
+  .reveal, .reveal-preview  {
+    
+    color: #333;
+  }
+
+  ::selection {
+  	background: rgb(87, 167, 224);
+  }
+
+  /*********************************************
+   * HEADERS
+   *********************************************/
+
+  .reveal h1, .reveal-preview h1,
+  .reveal h2, .reveal-preview h2,
+  .reveal h3, .reveal-preview h3,
+  .reveal h4, .reveal-preview h4,
+  .reveal h5, .reveal-preview h5,
+  .reveal h6, .reveal-preview h6 {
+    
+  	color: #246baf;
+  }
+
+
+  /*********************************************
+   * LINKS
+   *********************************************/
+
+  .reveal a, .reveal-preview a {
+  	color: #246baf;
+    text-decoration: underline;
+  }
+  	.reveal a:hover, .reveal-preview a:hover {
+  		color: #1d8045;
+  	}
+
+
+  /*********************************************
+   * NAVIGATION CONTROLS
+   *********************************************/
+
+  .reveal .controls .navigate-left,
+  .reveal .controls .navigate-left.enabled {
+  	border-right-color: #246baf;
+  }
+
+  .reveal .controls .navigate-right,
+  .reveal .controls .navigate-right.enabled {
+  	border-left-color: #246baf;
+  }
+
+  .reveal .controls .navigate-up,
+  .reveal .controls .navigate-up.enabled {
+  	border-bottom-color: #246baf;
+  }
+
+  .reveal .controls .navigate-down,
+  .reveal .controls .navigate-down.enabled {
+  	border-top-color: #246baf;
+  }
+
+  .reveal .controls .navigate-left.enabled:hover {
+  	border-right-color: #1d8045;
+  }
+
+  .reveal .controls .navigate-right.enabled:hover {
+  	border-left-color: #1d8045;
+  }
+
+  .reveal .controls .navigate-up.enabled:hover {
+  	border-bottom-color: #1d8045;
+  }
+
+  .reveal .controls .navigate-down.enabled:hover {
+  	border-top-color: #1d8045;
+  }
+
+  /*********************************************
+   * PROGRESS BAR
+   *********************************************/
+
+  .reveal .progress span {
+  	background: #246baf;
+
+</style><div class="reveal"><div class="slides"><section data-notes="感谢志愿者" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:81.57656406695982px;top:174.94479158630978px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567395374247" class="at-block-content"><h1>Python 调试新思路</h1><h1><span style="font-size:48px">New Ideas on Python Debugging</span><br>&nbsp;</h1></article></div><div style="width:317.72741580107015px;height:96.79867506484217px;left:627.9508970727101px;top:594.5160839050387px;" class="at-block at-block--pure"><article data-block-id="1568015612327" class="at-block-content"><img src=https://ae01.alicdn.com/kf/H53f886fd937541e1b65b38561b017533y.jpg /></article></div><div style="width:159.01149425287355px;height:161.74365051151398px;left:400.49425287356325px;top:433.6816368448079px;" class="at-block at-block--pure"><article data-block-id="1569024147641" class="at-block-content"><img src=https://ae01.alicdn.com/kf/Hbe5986b425f2421eba1b7df0d36ecb3bd.jpg /></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:79px;top:100px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567395374247" class="at-block-content"><h1>About me</h1></article></div><div style="left:82.06513409961686px;top:224.94252873563218px;width:800px;height:224.13793103448276px;" class="at-block at-block--pure"><article data-block-id="1569022330366" class="at-block-content MarkdownBlock"><ul>
+<li><p>Working for Google</p>
+</li>
+<li><p>Use Python since 2012</p>
+</li>
+<li><p>《捕蛇者说》播客创始人/pythonhunter.org</p>
+</li>
+</ul>
+</article></div><div style="width:70.69731800766283px;height:70.69731800766283px;left:179.51724137931032px;top:513.8850574712644px;" class="at-block at-block--pure"><article data-block-id="1569022416821" class="at-block-content"><img src=https://ae01.alicdn.com/kf/H4ddace3f40034f85bf8ed7f1af1643d1v.jpg /></article></div><div style="width:74.32950191570876px;height:74.32950191570876px;left:270.4214559386973px;top:514.3678160919541px;" class="at-block at-block--pure"><article data-block-id="1569022480963" class="at-block-content"><img src=https://ae01.alicdn.com/kf/H1e6a653226d242a0a89d8eb350b6d7009.jpg /></article></div><div style="width:82.81992337164749px;height:82.81992337164749px;left:364.2605363984674px;top:510.12260536398475px;" class="at-block at-block--pure"><article data-block-id="1569022534834" class="at-block-content"><img src=https://ae01.alicdn.com/kf/Hfab82712e1054164888f418793556cecc.jpg /></article></div><div style="left:480.5325670498086px;top:523.4482758620688px;width:211.49425287356314px;height:auto;" class="at-block at-block--pure"><article data-block-id="1569022548432" class="at-block-content"><p><span style="font-size:48px"><strong>@laike9m</strong></span></p></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:81.08799403430277px;top:69.72408650260999px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567395374247" class="at-block-content"><h1>几种错误</h1></article></div><div style="left:79px;top:231.42431021625652px;width:834.4519015659955px;height:auto0;" class="at-block at-block--pure"><article data-block-id="1567395374248" class="at-block-content"><ol><li>生成 bytecode 出错<span style="color:#999999">（e.g. Syntax Error）</span><br>&nbsp;</li><li>程序异常退出<span style="color:#999999">（e.g. Unhandled Exception）</span><br>&nbsp;</li><li>程序正常执行，但结果不符合预期<br>&nbsp;</li><li>程序正常执行且结果正确，但资源占用异常 <span style="color:#999999">(e.g. Memory&nbsp;leak)</span></li></ol></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:74.82401193139448px;top:73.90007457121551px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567395374247" class="at-block-content"><h1>几种错误</h1></article></div><div style="left:79px;top:231.42431021625652px;width:834.4519015659955px;height:auto0;" class="at-block at-block--pure"><article data-block-id="1567395374248" class="at-block-content"><ol><li><span style="color:#B3B3B3">生成 bytecode 出错（e.g. Syntax Error）</span><br>&nbsp;</li><li><span style="color:#B3B3B3">程序异常退出（e.g. Unhandled Exception）</span><br>&nbsp;</li><li><strong>程序正常执行，但结果不符合预期</strong><br>&nbsp;</li><li><span style="color:#B3B3B3">程序正常执行且结果正确，但资源占用异常</span></li></ol></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:74.82401193139448px;top:73.90007457121551px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567395374247" class="at-block-content"><h1>调试方法</h1></article></div><div style="left:79px;top:231.42431021625652px;width:834.4519015659955px;height:auto0;" class="at-block at-block--pure"><article data-block-id="1567395374248" class="at-block-content"><ul><li>print()</li><li>Logging</li><li>Debugger<ul><li>pdb(ipdb, pudb, etc)</li><li>PyCharm</li><li>VS Code</li></ul></li></ul></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:74.82401193139448px;top:73.90007457121551px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567395374247" class="at-block-content"><h1>调试方法</h1></article></div><div style="left:79px;top:231.42431021625652px;width:834.4519015659955px;height:auto0;" class="at-block at-block--pure"><article data-block-id="1567395374248" class="at-block-content"><ul><li><strong>print()</strong></li><li><span style="color:#B3B3B3">Logging</span></li><li><span style="color:#B3B3B3">Debugger</span><ul><li><span style="color:#B3B3B3">pdb(ipdb, pudb, etc)</span></li><li><span style="color:#B3B3B3">PyCharm</span></li><li><span style="color:#B3B3B3">VS Code</span></li></ul></li></ul></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:79px;top:100px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567397993014" class="at-block-content"><h1>print()</h1></article></div><div style="left:79px;top:220px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567405342601" class="at-block-content"><blockquote><p style="text-align:left">On the other hand, often the quickest way to debug a program is to <strong>add a few print statements</strong> to the source: the fast edit-test-debug cycle makes this simple approach very effective.&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-- <strong>Guido van Rossum</strong><br><span style="font-size:20px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://python.org/doc/essays/blurb.html">http://python.org/doc/essays/blurb.html</a></span></p></blockquote></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:79px;top:100px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567397993014" class="at-block-content"><h1>print()</h1></article></div><div style="left:79px;top:220px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567405342601" class="at-block-content"><blockquote><p style="text-align:left">I don't like debuggers. Never have, probably never will.</p><p style="text-align:left">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -- <strong>Linus Torvalds</strong><br><span style="font-size:16px">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:18px"><a href="https://lwn.net/2000/0914/a/lt-debugger.php3">https://lwn.net/2000/0914/a/lt-debugger.php3</a></span></p></blockquote></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:79px;top:100px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567397993014" class="at-block-content"><h1>print() 的优点</h1></article></div><div style="left:77.95600298284862px;top:277.3601789709172px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567397993015" class="at-block-content"><ul><li>开箱即用<br>&nbsp;</li><li>没有多余信息<br>&nbsp;</li><li>一般不影响程序执行<br>&nbsp;</li><li><em>“这段代码跑没跑？”</em></li></ul></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:79px;top:100px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567397993014" class="at-block-content"><h1>print() 的缺点</h1></article></div><div style="left:77.95600298284862px;top:277.3601789709172px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567397993015" class="at-block-content"><ul><li>需要对代码熟悉<br>&nbsp;</li><li>需要反复修改代码<br>&nbsp;</li><li>缺乏上下文<br>&nbsp;</li><li>输出难于管理</li></ul></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:74.82401193139448px;top:73.90007457121551px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567395374247" class="at-block-content"><h1>调试方法</h1></article></div><div style="left:79px;top:231.42431021625652px;width:834.4519015659955px;height:auto0;" class="at-block at-block--pure"><article data-block-id="1567395374248" class="at-block-content"><ul><li><span style="color:#B3B3B3">print()</span></li><li><strong>Logging</strong></li><li><span style="color:#B3B3B3">Debugger</span><ul><li><span style="color:#B3B3B3">pdb(ipdb, pudb, etc)</span></li><li><span style="color:#B3B3B3">PyCharm</span></li><li><span style="color:#B3B3B3">VS Code</span></li></ul></li></ul></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:79px;top:100px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567397993014" class="at-block-content"><h1>Logging</h1></article></div><div style="left:77.95600298284862px;top:277.3601789709172px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567397993015" class="at-block-content"></article></div><div style="left:79px;top:285.39149888143174px;width:800px;height:324.60850111856826px;" class="at-block at-block--pure"><article data-block-id="1567408205333" class="at-block-content MarkdownBlock"><pre class="hljs"><code class="lang-python"><span class="line width-1" start="1"><span class="hljs-keyword">import</span> logging</span>
+<span class="line width-1" start="2"></span>
+<span class="line width-1" start="3">logging.debug(<span class="hljs-string">'This is a debug message'</span>)</span>
+<span class="line width-1" start="4">logging.info(<span class="hljs-string">'This is an info message'</span>)</span>
+<span class="line width-1" start="5">logging.warning(<span class="hljs-string">'This is a warning message'</span>)</span>
+<span class="line width-1" start="6">logging.error(<span class="hljs-string">'This is an error message'</span>)</span>
+<span class="line width-1" start="7">logging.critical(<span class="hljs-string">'This is a critical message'</span>)</span>
+</code></pre>
+</article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:79px;top:100px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567397993014" class="at-block-content"><h1>Logging 的优点</h1></article></div><div style="left:94.65995525727067px;top:266.5995525727069px;width:800px;height:324.60850111856826px;" class="at-block at-block--pure"><article data-block-id="1567408205333" class="at-block-content MarkdownBlock"><ul>
+<li><p>可配置</p>
+</li>
+<li><p>方便管理（e.g. Sentry）</p>
+</li>
+<li><p>更丰富的上下文（filename, lineno, etc)</p>
+</li>
+</ul>
+</article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:76.91200596569725px;top:40.49217002237136px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567397993014" class="at-block-content"><h1>Logging 的缺点</h1></article></div><div style="left:90.48396718866515px;top:212.31170768083513px;width:800px;height:447.80014914243105px;" class="at-block at-block--pure"><article data-block-id="1567408205333" class="at-block-content MarkdownBlock"><ul>
+<li>需要配置<pre class="hljs"><code class="lang-python"><span class="line width-1" start="1">logger = logging.getLogger()</span>
+<span class="line width-1" start="2">handler = logging.StreamHandler()</span>
+<span class="line width-1" start="3">formatter = logging.Formatter(</span>
+<span class="line width-1" start="4">      <span class="hljs-string">'%(asctime)s %(name)-12s %(levelname)-8s %(message)s'</span>)</span>
+<span class="line width-1" start="5">handler.setFormatter(formatter)</span>
+<span class="line width-1" start="6">logger.addHandler(handler)</span>
+<span class="line width-1" start="7">logger.setLevel(logging.DEBUG)</span>
+</code></pre>
+</li>
+<li>未必开箱即用</li>
+<li>依然缺乏足够的上下文</li>
+</ul>
+</article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:74.82401193139448px;top:73.90007457121551px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567395374247" class="at-block-content"><h1>调试方法</h1></article></div><div style="left:79px;top:231.42431021625652px;width:834.4519015659955px;height:auto0;" class="at-block at-block--pure"><article data-block-id="1567395374248" class="at-block-content"><ul><li><span style="color:#B3B3B3">print()</span></li><li><span style="color:#B3B3B3">Logging</span></li><li><strong>Debugger</strong><ul><li><strong>pdb(ipdb, pudb, etc)</strong></li><li><strong>PyCharm</strong></li><li><strong>VS Code</strong></li></ul></li></ul></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:79px;top:100px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567397993014" class="at-block-content"><h1>Debugger 的优点</h1></article></div><div style="left:80.04399701715138px;top:254.4519015659955px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567414421038" class="at-block-content"><ul><li>功能强大<br>&nbsp;</li><li>不需要对代码熟悉<br>&nbsp;</li><li>快速定位未知问题</li></ul></article></div></section><section data-notes="ok，我们总结了一下各种调试手段的优劣，相信能帮助大家更好地debug。下面我们来轻松一下，看一个小故事。这个故事叫做《聪明的乌鸦》" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:79px;top:100px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567397993014" class="at-block-content"><h1>Debugger 的缺点</h1></article></div><div style="left:80.04399701715138px;top:254.4519015659955px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567414421038" class="at-block-content"><ul><li>依赖 库/编辑器/IDE<br>&nbsp;</li><li>一定的学习成本<br>&nbsp;</li><li>无法持久化输出<br>&nbsp;</li><li>性能</li></ul></article></div></section><section data-notes="之所以讲这个故事，是因为我发现乌鸦捡石头其实和我们调试代码很像。我们在调试的时候，经常会做一些无用功，到头来却发现我们只是白白浪费了时间。" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="width:494.580078125px;height:700px;left:232.7099609375px;top:0;" class="at-block at-block--pure"><article data-block-id="1568517142764" class="at-block-content"><img src=https://ae01.alicdn.com/kf/Hea517d969dda4804aa45db895d4acd82Z.jpg /></article></div></section><section data-notes="大家可以回忆一下，在你的程序员生涯里有没有经历过这些。比如，你是否曾经加了几十个 print，却定位不到错误，最后还得费老劲找到这些 print 并把他们去掉？你是否...
+
+这些工作有没有用？有。它们让我们离找出问题更近了一步。但是，它们是不是最直接，最好的方法呢？
+
+【停顿】
+
+这里我想问大家一个问题，调试的本质是什么？" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:79px;top:100px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567397993014" class="at-block-content"><p><span style="font-size:72px"><span style="color:#0062B1">你是否曾经...</span></span></p></article></div><div style="left:79px;top:244.86590038314176px;width:800px;height:365.13409961685824px;" class="at-block at-block--pure"><article data-block-id="1568274549144" class="at-block-content MarkdownBlock"><ul>
+<li><p>加了20个 print 却找不到错误，<span style="color:red">烦</span></p>
+</li>
+<li><p>单步跟了半天，然而问题并不在那，<span style="color:red">烦</span></p>
+</li>
+<li><p>思考被开会打断，只能从头开始想，<span style="color:red">烦</span></p>
+</li>
+<li><p>试图调试别人的代码，然后被绕晕了，<span style="color:red">烦</span></p>
+</li>
+</ul>
+</article></div></section><section data-notes="然而，目前的调试手段，能不能直接告诉我们答案呢？并不能。 正因为不能，我们才必须用我们的大脑去计算去推理，因此有了调试过程中的种种痛苦。" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:77.95600298284863px;top:237.524235645041px;width:822.9885057471264px;height:auto;" class="at-block at-block--pure"><article data-block-id="1567460641140" class="at-block-content"><h2 style="text-align:left"><span style="font-size:48px"><span style="color:#000000">问题：</span><em>var</em><span style="color:#000000"> 明明应该等于&nbsp;</span><em><span style="color:#A4DD00">foo</span></em></span></h2><h2 style="text-align:left"><span style="font-size:48px"><span style="color:#000000">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;为啥却是&nbsp;</span><em><span style="color:#F44E3B">bar</span></em><span style="color:#000000">&nbsp;&nbsp;</span></span>🤔🤔</h2><p style="text-align:left">&nbsp;</p><p style="text-align:left"><span style="font-size:48px"><span style="color:#000000">解决：<strong>弄清</strong>&nbsp;</span></span><strong><span style="font-size:48px"><em><span style="color:#F44E3B">bar</span></em><span style="color:#000000"> 这个值是怎么来的</span></span></strong></p></article></div><div style="left:77.95600298284862px;top:84.3400447427293px;width:800px;" class="at-block at-block--pure"><article data-block-id="1568519678815" class="at-block-content"><p><span style="font-size:72px"><span style="color:#0062B1">调试的本质</span></span></p></article></div></section><section data-notes="乌鸦可以直接从河里喝水，那我们有没有更直接的调试方法呢？" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:77.95600298284862px;top:203.1841909023117px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567397993014" class="at-block-content"><h1>就没有更<span style="color:#68BC00">直接</span>的</h1><h1>方法吗？</h1></article></div></section><section data-notes="答案，就是将所有需要手动进行的工作自动化。" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:70.78173776646354px;top:228.12054822700506px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567579832060" class="at-block-content"><p><span style="font-size:72px"><span style="color:#68BC00">Automate</span> manual work</span></p><p><span style="font-size:72px">将手动操作<span style="color:#68BC00">自动化</span></span></p></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:83.59770114942529px;top:35.63218390804597px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567397993014" class="at-block-content"><h1><span style="font-size:72px">An Example:&nbsp;<span style="color:#68BC00"><strong>PySnooper</strong></span></span></h1></article></div><div style="left:57.53256704980842px;top:176.99616858237553px;width:396.9348659003831px;height:171.45593869731795px;" class="at-block at-block--pure"><article data-block-id="1567580028924" class="at-block-content MarkdownBlock"><pre class="hljs"><code class="lang-python"><span class="line width-1" start="1"><span class="hljs-keyword">with</span> pysnooper.snoop():</span>
+<span class="line width-1" start="2">    lower = min(lst)</span>
+<span class="line width-1" start="3">    upper = max(lst)</span>
+<span class="line width-1" start="4">    mid = (lower + upper) / <span class="hljs-number">2</span></span>
+</code></pre>
+</article></div><div style="left:49.15325670498085px;top:359.6704980842912px;width:845.9770114942529px;height:323.56321839080454px;" class="at-block at-block--pure"><article data-block-id="1567580040970" class="at-block-content MarkdownBlock"><pre class="hljs"><code class="lang-bash"><span class="line width-1" start="1">New var:....... lst = [681, 267, 74, 832, 284, 678, ...]</span>
+<span class="line width-1" start="2">09:37:35.881721 line        10         lower = min(lst)</span>
+<span class="line width-1" start="3">New var:....... lower = 74</span>
+<span class="line width-1" start="4">09:37:35.882137 line        11         upper = max(lst)</span>
+<span class="line width-1" start="5">New var:....... upper = 832</span>
+<span class="line width-1" start="6">09:37:35.882304 line        12         mid = (lower + upper) / 2</span>
+<span class="line width-1" start="7">74 453.0 832</span>
+<span class="line width-1" start="8">New var:....... mid = 453.0</span>
+</code></pre>
+</article></div><div style="left:631.2744220730798px;top:27.904548844146234px;width:238.3296047725578px;height:auto;" class="at-block at-block--pure"><article data-block-id="1567661226962" class="at-block-content"><p><span style="font-size:14px"><a href="http://github.com/cool-RR/PySnooper"><span style="color:#666666">github.com/cool-RR/PySnooper</span></a></span></p></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:79px;top:110px;width:800px;height:379.9403430275913px;" class="at-block at-block--pure"><article data-block-id="1567404264095" class="at-block-content MarkdownBlock"><h1 id="what-we-have">What We Have</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">print</th>
+<th style="text-align:center">Debugger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">手动</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:center">自动化</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">❌</td>
+</tr>
+</tbody>
+</table>
+</article></div></section><section data-notes="after:
+
+有同学要问了：智能化调试的确很好，但真的能做到吗？
+
+几个月前呢，我也抱着这样的怀疑。然而，我们从原理上思考：既然解释器知道代码在所有时刻的所有行为，那么只要能拿到这些信息，理论上就能够完整还原代码的执行流程，从而实现智能化调试。" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:74.82401193139448px;top:41.536167039522745px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567397993014" class="at-block-content"><h1>自动化调试</h1></article></div><div style="width:675.2883974679328px;height:532.1330412595273px;left:144.65465184074628px;top:167.8669587404727px;" class="at-block at-block--pure"><article data-block-id="1567578300159" class="at-block-content"><img src=https://image-laike9m.oss-cn-beijing.aliyuncs.com/%E6%99%BA%E8%83%BD%E5%8C%96%E8%B0%83%E8%AF%95.svg /></article></div></section><section data-notes="为了探究自动化调试到底可不可行，我创建了名为 Cyberbrain 的项目。Cyberbrain，也就是电子脑，是来源于攻壳机动队这部作品的一个概念。简单来说就是通过将计算机和人脑相连，部分或全部代替人脑，以实现更强的思考计算能力。
+
+马上我们就会看到为什么这个名字十分贴切。不过在此之前，让我们做一个小测试，看看人脑的能力究竟如何。" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:79px;top:100px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567661600298" class="at-block-content"><h1>Cyberbrain&nbsp;<span style="font-size:72px">(电子脑)</span></h1></article></div><div style="left:79px;top:220px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567662847724" class="at-block-content"><p>github.com/laike9m/Cyberbrain</p></article></div><div style="width:644.2911877394636px;height:356.7827521913375px;left:156.32183908045977px;top:297.3362717853835px;" class="at-block at-block--pure"><article data-block-id="1567909821396" class="at-block-content"><img src=https://image-laike9m.oss-cn-beijing.aliyuncs.com/cyberbrain.jpg /></article></div></section><section data-notes="想象你正在调试这样一段代码。绿框里的 foo 是你关注的变量。给大家 20s 时间来仔细阅读这个程序，并计算 foo 的值是什么。之后我会问大家一个问题。" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="width:584.7601510859301px;height:581.0977701814254px;left:174.3999055712937px;top:59.78230536153971px;" class="at-block at-block--pure"><article data-block-id="1568596308435" class="at-block-content"><img src=https://ae01.alicdn.com/kf/Ha12a0cd26e104bc18c154085ebcc4daeS.png /></article></div></section><section data-notes="正在调试代码的你被同事拉进了会议室。" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="width:642.528735632184px;height:362.3862068965517px;left:161.0344827586207px;top:184.47892720306513px;" class="at-block at-block--pure"><article data-block-id="1567913112781" class="at-block-content"><img src=https://ae01.alicdn.com/kf/Ha23707e74f854a6c88b49f37140e41c0P.gif /></article></div><div style="left:81.20333648095686px;top:36.02140384010072px;width:800px;" class="at-block at-block--pure"><article data-block-id="1568596635216" class="at-block-content"><h1><span style="color:#0062B1"><span style="font-size:72px">开会了</span></span></h1></article></div><div style="left:75.69499527856468px;top:573.6355051935789px;width:800px;" class="at-block at-block--pure"><article data-block-id="1568596707302" class="at-block-content"><p>水豚(capybara)</p></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="width:658.904214559387px;height:495.16454447426986px;left:150.5478927203065px;top:109.5574712643678px;" class="at-block at-block--pure"><article data-block-id="1567913153196" class="at-block-content"><img src=https://ae01.alicdn.com/kf/H1b8b50bcd37d4020afa59f0bc1de4cdaq.gif /></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:79px;top:270px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567397993014" class="at-block-content"><h1>Quiz Time</h1></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:79px;top:270px;width:800px;" class="at-block at-block--pure"><article data-block-id="1568013498207" class="at-block-content"><h1>请说出之前那段代码的<span style="color:#68BC00">文件名</span></h1></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="width:553.2898842674882px;height:601.6717351339278px;left:207.18647549077696px;top:53.88382042162774px;" class="at-block at-block--pure"><article data-block-id="1567911241284" class="at-block-content"><img src=https://image-laike9m.oss-cn-beijing.aliyuncs.com/cb_api.png /></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="width:951.8355359765052px;height:700px;left:4.082232011747408px;top:0;" class="at-block at-block--pure"><article data-block-id="1567934383270" class="at-block-content"><img src=https://ae01.alicdn.com/kf/Hbd3b27587bd2412c99e2fbe3f0a7f343Q.jpg /></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="width:951.8355359765052px;height:700px;left:4.082232011747408px;top:0;" class="at-block at-block--pure"><article data-block-id="1567934383270" class="at-block-content"><img src=https://ae01.alicdn.com/kf/Hbd3b27587bd2412c99e2fbe3f0a7f343Q.jpg /></article></div><div style="left:45.59209545115584px;top:37.30052199850858px;width:395.9731543624161px;height:auto;" class="at-block at-block--pure"><article data-block-id="1568506997804" class="at-block-content"><ul><li style="text-align:left"><strong><span style="font-size:36px">变量追踪溯源</span></strong></li><li style="text-align:left"><strong><span style="font-size:36px">排除无关代码干扰</span></strong></li><li style="text-align:left"><strong><span style="font-size:36px">精确定位 bug</span></strong></li><li style="text-align:left"><span style="font-size:36px"><strong>调试信息持久化</strong></span></li></ul></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:79px;top:100px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567916196623" class="at-block-content"><h1><span style="font-size:72px">Cyberbrain 做了什么</span></h1></article></div><div style="left:79px;top:249.11877394636016px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567918895242" class="at-block-content"><p>&nbsp;</p><ul><li><strong>分治</strong>：<span style="color:#F44E3B">全局分析(难)</span>&nbsp;→ <span style="color:#68BC00">相邻行分析(易)</span><br>&nbsp;</li><li>先记录所有需要的信息，再做分析</li></ul></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:82.06513409961686px;top:31.034482758620683px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567661600298" class="at-block-content"><h1><span style="font-size:72px">Cyberbrain 做了什么</span></h1></article></div><div style="left:85.13026819923373px;top:174.36781609195404px;width:800px;height:486.2068965517241px;" class="at-block at-block--pure"><article data-block-id="1567919210559" class="at-block-content MarkdownBlock"><ul>
+<li><span style="color: #68BC00"><code>cyberbrain.init()</code></span><br> <span style="font-size: 30px"><code>sys.settrace(tracer: Callable[</code><span style="color: red"><code>FrameType</code></span><code>])</code></span><ul>
+<li><span style="color: red">frame object</span><br>&emsp;⮑ &nbsp;source location<br>&emsp;⮑ &nbsp;vars<br>&emsp;⮑ &nbsp;callsite</li>
+</ul>
+</li>
+<li><span style="color: #68BC00"><code>cyberbrain.register(</code><span style="color: #246baf"><code>foo</code></span><code>)</code></span><ul>
+<li>逆向遍历所有行，分析变量变化</li>
+<li>可视化</li>
+</ul>
+</li>
+</ul>
+</article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:79px;top:100px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567916196623" class="at-block-content"><h1>分析变量变化</h1></article></div><div style="width:660px;height:414px;left:143.8697318007663px;top:231.8888888888889px;" class="at-block at-block--pure"><article data-block-id="1567932832850" class="at-block-content"><img src=https://ae01.alicdn.com/kf/H766a348f728348ffa990e34b0a92cc147.png /></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:77.95600298284862px;top:62.41610738255034px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567916196623" class="at-block-content"><h1>What's Next</h1></article></div><div style="left:79px;top:195.93012275731823px;width:800px;height:414.06987724268174px;" class="at-block at-block--pure"><article data-block-id="1568509851641" class="at-block-content MarkdownBlock"><ul>
+<li><p>Fix bugs</p>
+</li>
+<li><p>优化内存使用</p>
+</li>
+<li><p>多线程支持</p>
+</li>
+<li><p>多变量支持，条件触发</p>
+</li>
+<li><p>更好的可视化</p>
+</li>
+</ul>
+</article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:77.95600298284862px;top:62.41610738255034px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567916196623" class="at-block-content"><h1>可视化</h1></article></div><div style="left:76.91200596569725px;top:199.69605801126283px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567922243975" class="at-block-content"><ul><li style="text-align:left"><span style="font-size:36px">更优雅的显示</span></li></ul></article></div><div style="width:677.524235645041px;height:164.03218336669414px;left:182.47576435495898px;top:267.9839083166529px;" class="at-block at-block--pure"><article data-block-id="1568512955492" class="at-block-content"><img src=https://ae01.alicdn.com/kf/H25dcc6ec591c471ca0f7e61e1e1478eeL.jpg /></article></div><div style="left:84.21998508575695px;top:307.6957494407159px;width:80.68605518269942px;height:auto;" class="at-block at-block--pure"><article data-block-id="1568512961021" class="at-block-content"><p><span style="font-size:72px"><span style="color:#F44E3B">❌</span></span></p></article></div><div style="width:388.08053691275165px;height:164.39522744220733px;left:188.86800894854585px;top:462.11633109619686px;" class="at-block at-block--pure"><article data-block-id="1568513017551" class="at-block-content"><img src=https://ae01.alicdn.com/kf/H908343fcd89a44ab9fe16296808e0f67U.jpg /></article></div><div style="width:329.38851603281137px;height:27.126113085055053px;left:232.30797912005966px;top:628.6271439224461px;" class="at-block at-block--pure"><article data-block-id="1568513134053" class="at-block-content"><img src=https://ae01.alicdn.com/kf/Hc0de57c22c1e47cf9befad876094a5560.jpg /></article></div><div style="left:94.42335536669815px;top:516.3487566887px;width:67.39062008183816px;height:auto;" class="at-block at-block--pure"><article data-block-id="1568534443883" class="at-block-content"><p><span style="font-size:72px"><span style="color:#68BC00">✅</span></span></p></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:79px;top:25.87621178225205px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567916196623" class="at-block-content"><h1>可视化</h1></article></div><div style="left:73.78001491424311px;top:145.4082131193911px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567922243975" class="at-block-content"><ul><li style="text-align:left"><span style="font-size:36px">可交互</span></li><li style="text-align:left"><span style="font-size:36px">更加智能</span></li></ul></article></div><div style="width:960px;height:466.2432223082881px;left:-6.610009442870632px;top:234.7568905770489px;" class="at-block at-block--pure"><article data-block-id="1568515643072" class="at-block-content"><img src=https://ae01.alicdn.com/kf/Hbc85ceb4a914451192e5330e82a54883Z.png /></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:85.26398210290827px;top:165.60029828486205px;width:800px;" class="at-block at-block--pure"><article data-block-id="1568013498207" class="at-block-content"><h1><span style="font-size:72px"><strong><span style="color:#68BC00">合作者招募中！</span></strong></span></h1><p><span style="font-size:72px"><span style="color:#68BC00">Collaborators Needed</span></span></p></article></div><div style="width:199.1262197041234px;height:171.90193185395026px;left:381.36554471843556px;top:435.50487630790093px;" class="at-block at-block--pure"><article data-block-id="1568509798761" class="at-block-content"><img src=https://ae01.alicdn.com/kf/H89ddcbea291740f283c84a9f422b7314y.png /></article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:75.3794389158888px;top:33.71904651700995px;width:800px;" class="at-block at-block--pure"><article data-block-id="1568013498207" class="at-block-content"><h1>总结</h1></article></div><div style="left:50.50350998997146px;top:161.75756640695315px;width:884.2911877394636px;height:518.586232610764px;" class="at-block at-block--pure"><article data-block-id="1568580091818" class="at-block-content MarkdownBlock"><ul>
+<li><p>传统 debug 方法：print, logging, debugger</p>
+</li>
+<li><p>痛点：无法直接对变量进行溯源</p>
+</li>
+<li><p>Cyberbrain 自动化调试</p>
+<ul>
+<li>变量追踪溯源</li>
+<li>排除无关代码干扰</li>
+<li>精确定位 bug</li>
+<li>调试信息持久化</li>
+<li>P.S. 感谢 @thautwarm, @laixintao, @zhangyangyu</li>
+</ul>
+</li>
+</ul>
+</article></div></section><section data-notes="" data-background-video-loop="true" data-background-video-muted="true" data-background-color="" data-transition="none"><div style="left:76.91200596569725px;top:204.2281879194631px;width:800px;" class="at-block at-block--pure"><article data-block-id="1567916196623" class="at-block-content"><h1>&nbsp; 谢谢大家！</h1><p>&nbsp;</p><p><span style="font-size:72px">Q &amp; A</span></p></article></div><div style="width:317.72741580107015px;height:96.79867506484217px;left:627.9508970727101px;top:594.5160839050387px;" class="at-block at-block--pure"><article data-block-id="1568015642485" class="at-block-content"><img src=https://ae01.alicdn.com/kf/H53f886fd937541e1b65b38561b017533y.jpg /></article></div></section><style>.at-block{ position:absolute }</style></div></div></div>
+
+    <!-- dependencies -->
+		<script src="https://yanshuo.io/assets/player/lib/js/head.min.js"></script>
+		<script src="https://yanshuo.io/assets/player/js/reveal.min.js"></script>
+
+    <!-- init -->
+    <script>
+      Reveal.initialize({
+        controls: true,
+        history: true,
+        center: false,
+
+        transition:             'none',
+        backgroundTransition:   'default',
+        transitionSpeed:        'default',
+
+        // no marked.js
+				// no markdown.js
+				// no highlight.js
+				dependencies: [
+					{ src: 'https://yanshuo.io/assets/player/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'https://yanshuo.io/assets/player/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'https://yanshuo.io/assets/player/plugin/notes/notes.js', async: true }
+				]
+      });
+    </script>
+  </body>
+</html>

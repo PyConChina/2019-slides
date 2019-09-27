@@ -1,0 +1,453 @@
+
+
+/* Template Theme Generated */
+
+section.has-dark-background,
+section.has-dark-background h1,
+section.has-dark-background h2,
+section.has-dark-background h3,
+section.has-dark-background h4,
+section.has-dark-background h5,
+section.has-dark-background h6 {
+  color: #fff;
+}
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background: #FFF;
+  background-color: #FFF;
+}
+
+.reveal {
+  font-family: "Ubuntu", sans-serif;
+  color: #1C1C1C;
+  font-size: 40px;
+}
+
+::selection {
+  color: #1C1C1C;
+  text-shadow: none;
+  background: rgba(0, 0, 0, 0.99);
+}
+
+::-moz-selection {
+  color: #1C1C1C;
+  text-shadow: none;
+  background: rgba(0, 0, 0, 0.99);
+}
+
+.reveal .slides section,
+.reveal .slides section > section {
+  line-height: 1.3;
+  font-weight: inherit;
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2 {
+  color: #5289F7;
+  font-family: "Raleway Heavy", sans-serif;
+  text-transform: none;
+  margin: 0 0 15px 0;
+  line-height: 1.2;
+  text-shadow: none;
+  letter-spacing: normal;
+  word-wrap: break-word;
+}
+
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  color: #111111;
+  font-family: "Raleway Medium", sans-serif;
+  text-transform: none;
+  margin: 0 0 15px 0;
+  line-height: 1.1;
+  text-shadow: none;
+  letter-spacing: normal;
+  word-wrap: break-word;
+}
+
+.reveal h1 {
+  font-size: 3.77em;
+}
+
+.reveal h2 {
+  font-size: 2.11em;
+}
+
+.reveal h3 {
+  font-size: 1.55em;
+}
+
+.reveal h4 {
+  font-size: 1em;
+}
+
+.reveal h1 {
+  text-shadow: none;
+}
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: 0 auto 15px auto;
+  line-height: 1.3;
+}
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.reveal strong,
+.reveal b {
+  font-weight: bold;
+}
+
+.reveal em {
+  font-style: italic;
+}
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  text-align: left;
+  margin: 0 0 0 1em;
+  display: inline-block;
+}
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+  display: block;
+  margin-left: 40px;
+}
+
+.reveal ol {
+  list-style-type: decimal;
+}
+
+.reveal ul {
+  list-style-type: disc;
+}
+
+.reveal ul ul {
+  list-style-type: square;
+}
+
+.reveal ul ul ul {
+  list-style-type: circle;
+}
+
+.list-circle-bullets {
+  list-style-type: circle !important;
+}
+
+.list-square-bullets {
+  list-style-type: square !important;
+}
+
+.list-alpha-bullets {
+  list-style-type: upper-alpha !important;
+}
+
+.list-roman-bullets {
+  list-style-type: lower-roman !important;
+}
+
+.list-spaced-bullets li {
+    margin-bottom: 1em;
+}
+
+.list-no-bullets {
+    list-style-type: none !important;
+}
+
+.list-boxed-bullets li {
+  margin-left: -36px;
+  margin-right: 12px;
+  padding-right: 0;
+  position: relative;
+  list-style-type: none;
+  counter-increment: step-counter;
+}
+
+.list-boxed-bullets li::before {
+  font-size: 80%;
+  font-weight: bold;
+  padding: 3px 10px;
+  margin-right: 12px;
+  border-radius: 3px;
+  color: #FFF;
+  background-color: #5289F7;
+  content: counter(step-counter);
+}
+
+.reveal dt {
+  font-weight: bold;
+}
+
+.reveal dd {
+  margin-left: 40px;
+}
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 auto 15px auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block;
+}
+
+.reveal q {
+  font-style: italic;
+}
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 auto 15px auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: monospace;
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: none;
+}
+
+.reveal code {
+  font-family: "Source Code Pro Medium", monospace;
+  text-transform: none;
+  font-feature-settings: "calt" 1;
+}
+
+.reveal pre code {
+  display: block;
+  padding: 1px;
+  overflow: hidden;
+  word-wrap: normal;
+  width: 98% !important;
+  margin: 1px auto !important;
+}
+
+.reveal pre code {
+  max-height: 60vh !important;
+}
+
+@media (device-width: 100vw) and (device-height: 100vh) {
+  .reveal pre code {
+    max-height: 50vh !important;
+  }
+}
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.reveal table th {
+  font-weight: bold;
+}
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  border-bottom: 1px solid;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+}
+
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
+  text-align: center;
+}
+
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
+  text-align: right;
+}
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.reveal sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.reveal sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top;
+}
+
+.reveal small * {
+  vertical-align: top;
+}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: #5289F7;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease;
+}
+
+.reveal a:hover {
+  color: #5254F7;
+  text-shadow: none;
+  border: none;
+}
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #00003f;
+}
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 0 0px 15px 0px;
+}
+
+.reveal section img.plain {
+  border: 0;
+  box-shadow: none;
+}
+
+.reveal a img {
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  transition: all .15s linear;
+}
+
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #5254F7;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls {
+  color: #484848;
+}
+
+.gp-menu-bars {
+  color: #484848 !important;
+}
+
+#title-footer {
+  background: none !important;
+}
+
+#title-footer p.footer-hard  {
+  color: #484848 !important;
+}
+
+#title-footer p.footer-fade  {
+  color: #484848 !important;
+}
+
+div.slide-number a {
+    color: #484848 !important;
+}
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  color: #484848;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.reveal .progress span {
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+/*********************************************
+ * PRINT BACKGROUND
+ *********************************************/
+@media print {
+  .backgrounds {
+    background-color: #fff; }
+}
+
+.font-lato { font-family: "Lato" !important; }
+.font-montserrat { font-family: "Montserrat" !important; }
+.font-nunito-sans { font-family: "Nunito Sans" !important; }
+.font-open-sans { font-family: "Open Sans" !important; }
+.font-oswald { font-family: "Oswald" !important; }
+.font-poppins { font-family: "Poppins" !important; }
+.font-prompt { font-family: "Prompt" !important; }
+.font-quicksand { font-family: "Quicksand" !important; }
+.font-raleway { font-family: "Raleway" !important; }
+.font-roboto { font-family: "Roboto" !important; }
+.font-source-sans-pro { font-family: "Source Sans Pro" !important; }
+.font-ubuntu { font-family: "Ubuntu" !important; }
+.font-work-sans { font-family: "Work Sans" !important; }
+.font-bubblegum { font-family: "Bubblegum" !important; }
+.font-concert-one { font-family: "Concert One" !important; }
+.font-righteous { font-family: "Righteous" !important; }
+
+.font-lato-medium { font-family: "Lato Medium" !important; }
+.font-montserrat-medium { font-family: "Montserrat Medium" !important; }
+.font-nunito-sans-medium { font-family: "Nunito Sans Medium" !important; }
+.font-open-sans-medium { font-family: "Open Sans Medium" !important; }
+.font-oswald-medium { font-family: "Oswald Medium" !important; }
+.font-poppins-medium { font-family: "Poppins Medium" !important; }
+.font-prompt-medium { font-family: "Prompt Medium" !important; }
+.font-quicksand-medium { font-family: "Quicksand Medium" !important; }
+.font-raleway-medium { font-family: "Raleway Medium" !important; }
+.font-roboto-medium { font-family: "Roboto Medium" !important; }
+.font-source-sans-pro-medium { font-family: "Source Sans Pro Medium" !important; }
+.font-ubuntu-medium { font-family: "Ubuntu Medium" !important; }
+.font-work-sans-medium { font-family: "Work Sans Medium" !important; }
+
+.font-lato-heavy { font-family: "Lato Heavy" !important; }
+.font-montserrat-heavy { font-family: "Montserrat Heavy" !important; }
+.font-nunito-sans-heavy { font-family: "Nunito Sans Heavy" !important; }
+.font-open-sans-heavy { font-family: "Open Sans Heavy" !important; }
+.font-oswald-heavy { font-family: "Oswald Heavy" !important; }
+.font-poppins-heavy { font-family: "Poppins Heavy" !important; }
+.font-prompt-heavy { font-family: "Prompt Heavy" !important; }
+.font-quicksand-heavy { font-family: "Quicksand Heavy" !important; }
+.font-raleway-heavy { font-family: "Raleway Heavy" !important; }
+.font-roboto-heavy { font-family: "Roboto Heavy" !important; }
+.font-source-sans-pro-heavy { font-family: "Source Sans Pro Heavy" !important; }
+.font-ubuntu-heavy { font-family: "Ubuntu Heavy" !important; }
+.font-work-sans-heavy { font-family: "Work Sans Heavy" !important; }

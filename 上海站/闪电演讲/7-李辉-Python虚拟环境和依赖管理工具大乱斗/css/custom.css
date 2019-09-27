@@ -1,0 +1,67 @@
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 {
+    text-transform: none !important;
+}
+
+.small-img {
+    max-width: 1em;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.blur {
+       color: transparent;
+       text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+/* .reveal .slides a {
+    color: grey;
+    text-decoration: underline;
+} */
+
+.reveal .controls button {
+    color: grey;
+}
+
+.colored {
+    color: grey;
+}
+
+.large {
+    font-size: 1.2em;
+}
+
+.spin {
+    animation: spin infinite 5s linear;
+}
+
+.spin-back {
+    animation: spin-back infinite 5s linear;
+}
+
+.reveal section img.transparent {
+    background: none;
+}
+
+.reveal section img.inline {
+    margin: 0;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-back {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}

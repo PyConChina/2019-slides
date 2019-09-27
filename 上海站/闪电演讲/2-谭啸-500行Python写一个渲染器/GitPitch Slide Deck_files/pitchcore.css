@@ -1,0 +1,24 @@
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:1.3em;
+  font-weight: bold;
+}
+#gp-logo img {
+  max-height: 3.5em;
+  max-width: none;
+}
+.reveal .controls {
+  bottom: 20px;
+}
+.reveal .slide-number {
+  bottom: 3px !important;
+  font-size: 11px !important;
+  color: gray !important;
+  background-color: inherit !important;
+}
+.reveal .slide-number a {
+  font-size: inherit !important;
+}
+.em { font-size: inherit; }
