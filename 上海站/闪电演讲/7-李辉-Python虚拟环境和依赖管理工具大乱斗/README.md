@@ -11,5 +11,5 @@ PyCon China 2019 闪电演讲最后一个，9 月 21 日下午，上海。
 ## Links
 
 - 幻灯片：http://greyli.com/slides/pyconchina2019-venv
-- 演讲录像：待上传
+- 演讲录像： [bilibili](https://www.bilibili.com/video/av69005162/) | [YouTube](https://www.youtube.com/watch?v=2DwCjk0haVM)
 - 介绍文章：http://greyli.com/pyconchina-2019-fighting-among-python-virtual-environment-and-dependency-management-tools/
